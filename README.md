@@ -37,14 +37,34 @@ Based on NVIDIA's course ,we were able to create an AI to which I "fed" the "smo
 **Neural networks**
 Neural networks are computational models inspired by the human brain's structure and functioning. They consist of interconnected nodes (neurons) organized in layers, where each neuron processes and transmits information. These networks learn patterns and relationships from data through a process called training, adjusting the strength of connections (weights) between neurons to optimize performance on specific tasks such as classification or prediction.
 
-##
 
 
-
-  
 
 
 ## Running this project
+1-Choose a dataset from kaggle and sort it in the 3 folders cites above
+
+2-Download the dataset on your jetson nano
+
+3-Unzip the dataset 
+
+4-Run the docker container with this command in VS code : **./docker/run.sh**
+
+5-Now train your model with this command :**python3 train.py --model-dir=models/*folder_name* data/*folder_name***
+
+ ---> Chage the epochs, batches ,and workers parameters as wished
+ 
+6-Export your script to onnx with this command : **python3 onnx_export.py --model-dir=models/*file_name***
+
+7-Exit the docker with **ctrl+D**
+
+8-Set the NET and DATASET variables
+
+9-Test your model with this command : imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/*folder_name*/*file_name*.jpg *file_name*.jpg
+
+10-You can the test the whole folder with this command : imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/*folder_name*/ *new_folder_relative_path* 
+
+
 
 
 [View a video explanation here](video link)
