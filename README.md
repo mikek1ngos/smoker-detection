@@ -68,3 +68,7 @@ Neural networks are computational models inspired by the human brain's structure
 
 
 [View a video explanation here](video link)
+## Problems I ran into  
+The main obstacle i faced was overfitting :  the model cannot generalize and fits too closely to the training dataset instead. Overfitting happens due to several reasons, such as: The training data size is too small and does not contain enough data samples to accurately represent all possible input data values. 
+The model then labeled smokers and non smokers depending on their ethnicity because i had ran too many epochs (see def above )
+
