@@ -64,10 +64,9 @@ Neural networks are computational models inspired by the human brain's structure
 
 10-You can the test the whole folder with this command : imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/*folder_name*/ *new_folder_relative_path* 
 
+link of the video :***https://youtu.be/oB6oANhg5JA***
 
 
-
-[View a video explanation here](video link)
 ## Problems I ran into  
 The main obstacle i faced was overfitting :  the model cannot generalize and fits too closely to the training dataset instead. Overfitting happens due to several reasons, such as: The training data size is too small and does not contain enough data samples to accurately represent all possible input data values. 
 The model then labeled smokers and non smokers depending on their ethnicity because i had ran too many epochs (see def above )
