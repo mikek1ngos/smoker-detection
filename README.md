@@ -64,7 +64,7 @@ Neural networks are computational models inspired by the human brain's structure
 
 10-You can the test the whole folder with this command : imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/*folder_name*/ *new_folder_relative_path* 
 
-link of the video :***https://youtu.be/oB6oANhg5JA***
+This video should clarify some of my vague ideas :***https://youtu.be/oB6oANhg5JA***
 
 
 ## Problems I ran into  
